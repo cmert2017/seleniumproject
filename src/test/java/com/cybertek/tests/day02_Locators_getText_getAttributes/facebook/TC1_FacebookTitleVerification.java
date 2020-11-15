@@ -11,6 +11,8 @@ public class TC1_FacebookTitleVerification {
         //TC #1: Facebook title verification
         // 1.Open Chrome browser
         System.setProperty("webdriver.chromedriver","chromedriver");
+        
+
         driver = new ChromeDriver();
         driver.manage().window().maximize();
 

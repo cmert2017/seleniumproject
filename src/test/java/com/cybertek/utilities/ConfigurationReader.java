@@ -6,7 +6,7 @@ import java.util.Properties;
 
 public class ConfigurationReader {
     //#1- We created the properties object
-        private static  Properties properties = new Properties();
+        private static final Properties properties = new Properties();
 
     static{
      //#2- We get the path and pass it into FileInputStream, to open the file

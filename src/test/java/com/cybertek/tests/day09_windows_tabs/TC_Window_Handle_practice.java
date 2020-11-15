@@ -35,6 +35,7 @@ public class TC_Window_Handle_practice {
     }
 
 
+
     @Test
     public void windowHandlingPractice_Test(){
         driver.get("http://practice.cybertekschool.com/windows");

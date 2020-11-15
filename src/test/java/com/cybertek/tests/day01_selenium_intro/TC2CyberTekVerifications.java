@@ -36,7 +36,7 @@ public class TC2CyberTekVerifications {
 
 
         System.out.println(driver.getWindowHandle());
-        System.out.println("");
+        System.out.println();
 
         driver.close();
     }

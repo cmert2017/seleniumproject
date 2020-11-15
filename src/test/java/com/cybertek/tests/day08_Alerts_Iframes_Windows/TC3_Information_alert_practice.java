@@ -36,7 +36,7 @@ public class TC3_Information_alert_practice {
 
 
     @Test
-    public void  Alert_Test(){
+    public void  Alert_Test() throws InterruptedException {
 
 
         WebElement promptAlertElement = driver.findElement(By.xpath("//button[.='Click for JS Prompt']"));
@@ -44,8 +44,9 @@ public class TC3_Information_alert_practice {
         promptAlertElement.click();
 
         Alert alert =  driver.switchTo().alert();
-        driver.switchTo().window("");
+       // driver.switchTo().window("");
 
+        Thread.sleep(3000);
         alert.sendKeys("hello");
         alert.accept();
 
