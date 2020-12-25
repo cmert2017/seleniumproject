@@ -18,11 +18,13 @@ public class WriteInToExcelFile {
         FileInputStream file= new FileInputStream(path);
         Workbook workbook = WorkbookFactory.create(file);
         Sheet sheet = workbook.getSheet("QA2-short");
-        Row row1 = sheet.getRow(1);
+        Row row1 = sheet.getRow(2);
 
+        System.out.println("Before row1.getCell(4) = " + row1.getCell(4));
 
+        row1.getCell(4).setCellValue("FAILED");
 
-        row1.getCell(4).setCellValue("PASSED");
+        System.out.println("After row1.getCell(4) = " + row1.getCell(4));
 
         FileOutputStream fileOutputStream = new FileOutputStream(path);
         workbook.write(fileOutputStream);

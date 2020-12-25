@@ -19,6 +19,8 @@ public class TC1GooogleTitleVerification {
         System.out.println("actualUrl = " + actualUrl);
         String expectedUrl = "Google";
         System.out.println("expectedUrl = " + expectedUrl);
+       // System.out.println("driver.getPageSource() = " + driver.getPageSource());
+        System.out.println("driver.getClass() = " + driver.getClass());
 
         if(actualUrl.equals("Google")){
             System.out.println("Pass");

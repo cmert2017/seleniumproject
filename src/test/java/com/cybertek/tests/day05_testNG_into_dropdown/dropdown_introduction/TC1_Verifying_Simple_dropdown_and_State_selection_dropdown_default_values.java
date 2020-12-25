@@ -24,6 +24,7 @@ public class TC1_Verifying_Simple_dropdown_and_State_selection_dropdown_default_
         WebElement dropDownElement = driver.findElement(By.cssSelector("#dropdown"));
         Select simpleDropDown = new Select(dropDownElement);
         String actualSelectedOption = simpleDropDown.getFirstSelectedOption().getText();
+
         String expectedSelectedOption = "Please select an option";
         Assert.assertEquals(actualSelectedOption,expectedSelectedOption,"they are not equal");
         // 4.Verify “State selection” default selected value is correct

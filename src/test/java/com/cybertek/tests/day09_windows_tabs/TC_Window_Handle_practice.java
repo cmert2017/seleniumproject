@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -35,6 +36,10 @@ public class TC_Window_Handle_practice {
     }
 
 
+    @BeforeClass
+    public void beforeClass() {
+        
+    }
 
     @Test
     public void windowHandlingPractice_Test(){
@@ -58,6 +63,7 @@ public class TC_Window_Handle_practice {
 
         Set<String> windowHandles = driver.getWindowHandles();
 
+
         for (String windowHandle : windowHandles) {
             driver.switchTo().window(windowHandle);
             System.out.println(windowHandle);
@@ -67,6 +73,15 @@ public class TC_Window_Handle_practice {
         String titleAfterSwitchToNewTab = driver.getTitle();
         System.out.println("titleAfterSwitchToNewTab = " + titleAfterSwitchToNewTab);
 
+/*
+        //assertion fails and it throws exception and execution will stop.
+        Assert.assertTrue(3>4, "great");
+
+
+       //softAssert will not throw exception so executuon continues after assertion fails
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(4>3,"again great");
+       */
 
         driver.switchTo().window(mainHandle);
 
